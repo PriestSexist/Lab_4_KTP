@@ -19,10 +19,9 @@ class JImageDisplay extends JComponent {
 
     }
 
-    //метод просто выводит на экран данные изображения
+    //метод просто выводит на экран данное изображение
     @Override
-    public void paintComponent(Graphics g)
-    {
+    public void paintComponent(Graphics g) {
         //вызываем функцию из суперкласса
         super.paintComponent(g);
         //рисуем изображение в компоненте
@@ -30,19 +29,17 @@ class JImageDisplay extends JComponent {
     }
 
     //метод для очистки картинки (все пиксели чёрные)
-    public void clearImage()
-    {
+    public void clearImage() {
         int[] blankArray = new int[getWidth() * getHeight()];
         displayImage.setRGB(0, 0, getWidth(), getHeight(), blankArray, 0, 1);
     }
 
     //метод для окраски пикселей
-    public void drawPixel(int x, int y, int rgbColor)
-    {
+    public void drawPixel(int x, int y, int rgbColor) {
         displayImage.setRGB(x, y, rgbColor);
     }
 
-    //метод для показывания картинки из другого класса
+    //геттер для картинки из другого класса
     public BufferedImage getImage() {
         return displayImage;
     }

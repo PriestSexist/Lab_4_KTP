@@ -16,7 +16,7 @@ public class FractalExplorer
     //объект для генератора фракталов
     private FractalGenerator fractal;
 
-    //объект который указывает диапозон, который мы сейчас показываем
+    //объект который указывает диапазон, который мы сейчас показываем
     private Rectangle2D.Double range;
 
     //конструктор для установки размера дисплея и инициализаии объектов для генератора фрактала
@@ -29,7 +29,6 @@ public class FractalExplorer
         range = new Rectangle2D.Double();
         fractal.getInitialRange(range);
         display = new JImageDisplay(displaySize, displaySize);
-
     }
 
     //создаём GUI(графикал юзер интерфейс)
@@ -57,7 +56,7 @@ public class FractalExplorer
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        //создаю верхнеюю панель, добавляю лейбл(место для текста) и устанавливаю е   сверху
+        //создаю верхнеюю панель, добавляю лейбл(место для текста) и устанавливаю его сверху
         JPanel myTopPanel = new JPanel();
         JLabel myLabel = new JLabel("Fractal:");
         myTopPanel.add(myLabel);
@@ -128,8 +127,7 @@ public class FractalExplorer
     private class MouseHandler extends MouseAdapter
     {
         @Override
-        public void mouseClicked(MouseEvent e)
-        {
+        public void mouseClicked(MouseEvent e) {
             //получаю координаты клика
             int x = e.getX();
             double xCoord = fractal.getCoord(range.x, range.x + range.width, displaySize, x);

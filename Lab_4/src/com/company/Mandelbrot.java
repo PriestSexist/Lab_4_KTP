@@ -6,8 +6,6 @@ public class Mandelbrot extends FractalGenerator {
     //константа для максимального числа итераций
     public static final int MAX_ITERATIONS = 2000;
 
-    // метод позволяет генератору фракталоов определить наиболее интересную область
-    // комплексной плоскасти для конкретного фрактала
     @Override
     public void getInitialRange(Rectangle2D.Double range) {
         //начальный диапозон
@@ -43,12 +41,4 @@ public class Mandelbrot extends FractalGenerator {
         return iteration;
     }
 
-    /**
-     * An implementation of toString() on this fracal implementation.  Returns
-     * the name of the fractal: "Mandelbrot".
-
-    public String toString() {
-        return "Mandelbrot";
-    }
-    */
 }
